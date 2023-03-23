@@ -1,5 +1,4 @@
-#include "function_pointers.h"
-#include <stdio.h>
+#include "function_pointersh"
 /**
 * print_name - Entry point
 * @name: char
