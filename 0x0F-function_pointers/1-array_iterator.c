@@ -1,13 +1,17 @@
-#include "function_pointersh"
+#include "function_pointers.h"
 /**
-* print_name - Entry point
-* @name: char
-* @f: char dsfasdf
+* array_iterator - Entry point
+* @array: a array
+* @size: a size_t
+* @action: a action
 * Return: Always 0 (Success)
 */
-void print_name(char *name, void (*f)(char *))
+void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	if (name == NULL || f == NULL)
+	int i;
+
+	if (array == NULL || action == NULL)
 		return;
-	f(name);
+	for (i = 0; i < (int)size; i++)
+		action(*(array + i));
 }
